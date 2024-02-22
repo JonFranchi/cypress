@@ -50,7 +50,7 @@ const createCLIExecutable = (command) => {
 const yarn = createCLIExecutable('yarn')
 const npx = createCLIExecutable('npx')
 
-const runAllBuild = _.partial(npx, ['NODE_OPTIONS=--openssl-legacy-provider', 'lerna', 'run', 'build-prod', '--ignore', 'cli'])
+const runAllBuild = _.partial(npx, ['NODE_OPTIONS=--openssl-legacy-provider','lerna', 'run', 'build-prod', '--ignore', 'cli'])
 
 // removes transpiled JS files in the original package folders
 const runAllCleanJs = _.partial(npx, ['lerna', 'run', 'clean-js', '--ignore', 'cli'])
